@@ -1,6 +1,5 @@
-#summary One-sentence summary of this page.
+#summary A mobile app for tracking human resources. It does this on the basis of their updated locations either by GPS or text messages.
 #labels MobileApp,Phase-Requirements,Databases,Featured,GPS,GoogleMaps,Java,friends,IterativeEnhancementModel
-Find-Ur-Pal is a mobile app for tracking human resources. It does this on the basis of their updated locations either by GPS or text messages.
 
 = Introduction =
 
