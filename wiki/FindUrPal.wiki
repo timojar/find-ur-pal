@@ -1,0 +1,31 @@
+#summary One-sentence summary of this page.
+#labels MobileApp,Phase-Requirements,Databases,Featured,GPS,GoogleMaps,Java,friends,IterativeEnhancementModel
+Find-Ur-Pal is a mobile app for tracking human resources. It does this on the basis of their updated locations either by GPS or text messages.
+
+= Introduction =
+
+How many times has it happened that you waited two hours for a professor only to realize that he was already there in the campus and thus losing your precious working time? Well this project aims at eliminating such situations. It'll tell you where your faculty(colleague) is and thus reducing your worries.
+
+
+= Motivation =
+
+Our project is aimed at easing the communication between students and faculty. In today’s market where money and time are important, our product takes care of both the things. It saves peoples’ time as finding people gets simpler. This being a course project is free hence saving money. All that will be required is an initial investment of time by the users for the testing phase. Our product aims at being available in two forms, namely – text messages and a mobile app(for phones with a GPS system). 
+
+Students wait long hours for their instructors to arrive to the Institute, not knowing that the instructor, due to some reason might not be coming at all. In this scenario, not all the students would ring up the instructor and ask him if he’d be coming or not. And neither will the 50-60 students come to know even if the instructor has informed 2-3 as they might not be able to spread the word. Hence this software might be of great use in such scenarios. 
+
+Further, sometimes people may be in a location where they hope to find a friend or two, but might have misplaced their phone number. Then they can simply use the app and locate their friend.
+
+= Features, Functionality, Services =
+1.Interactive UI
+
+2.Simple to use
+
+3.Internet connection not necessary.
+
+4.Cost effective.
+
+5.Fast
+
+6.Can be used as a simple text message service or a mobile app
+
+7.Reliable 
