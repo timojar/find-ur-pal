@@ -55,7 +55,6 @@ public class Pf1 {
 		String [] str = {"abc.txt"};
 		Pf1 p = new Pf1();
 		String str1;
-		boolean flag;
 		for(int i = 0; i < str.length; i++)
 		{
 			FileInputStream in = new FileInputStream(str[i]);

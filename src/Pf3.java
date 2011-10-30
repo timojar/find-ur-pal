@@ -4,9 +4,9 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
 
-public class Pf2 {
+public class Pf3 {
 	Actions a = new Actions();
-	public void parse(String s)
+	public void acceptRequest(String s)
 	{
 		String numA,numB;
 		String [] temp = s.split(":", 2);
@@ -16,10 +16,7 @@ public class Pf2 {
 		numB = temp[1];
 		System.out.println(numA);
 		System.out.println(numB);
-		if(a.selectConnections(numA, numB))
-		{
-			a.updateFollow(numA, numB);
-		}
+		a.updateConnections(numA, numB);
 	}
 	public void fileDelete(String fileName)
 	{
@@ -50,14 +47,14 @@ public class Pf2 {
 	}
 	public static void main(String[] args) throws Exception {
 		String [] str = {"abc.txt"};
-		Pf2 p = new Pf2();
+		Pf3 p = new Pf3();
 		String str1;
 		for(int i = 0; i < str.length; i++)
 		{
 			FileInputStream in = new FileInputStream(str[i]);
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			str1 = br.readLine();
-			p.parse(str1);
+			p.acceptRequest(str1);
 			in.close();
 			p.fileDelete(str[i]);
 		}

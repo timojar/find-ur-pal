@@ -2,24 +2,25 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 
-public class Pf2 {
+public class Pf4 {
 	Actions a = new Actions();
-	public void parse(String s)
+	SendMsg msg = new SendMsg();
+	ArrayList<String> alist = new ArrayList<String>();
+	public void getLocation(String s)
 	{
-		String numA,numB;
+		String num,place;
 		String [] temp = s.split(":", 2);
 		s = temp[1];
 		temp = s.split(",", 2);
-		numA = temp[0];
-		numB = temp[1];
-		System.out.println(numA);
-		System.out.println(numB);
-		if(a.selectConnections(numA, numB))
-		{
-			a.updateFollow(numA, numB);
-		}
+		num = temp[0];
+		place = temp[1];
+		a.updateLocation(num, place);
+		alist = a.selectFollow(num);
+		for(int i = 0; i < alist.size(); i++)
+			msg.sendLocation(num, place);
 	}
 	public void fileDelete(String fileName)
 	{
@@ -50,14 +51,14 @@ public class Pf2 {
 	}
 	public static void main(String[] args) throws Exception {
 		String [] str = {"abc.txt"};
-		Pf2 p = new Pf2();
+		Pf4 p = new Pf4();
 		String str1;
 		for(int i = 0; i < str.length; i++)
 		{
 			FileInputStream in = new FileInputStream(str[i]);
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			str1 = br.readLine();
-			p.parse(str1);
+			//p.acceptRequest(str1);
 			in.close();
 			p.fileDelete(str[i]);
 		}
