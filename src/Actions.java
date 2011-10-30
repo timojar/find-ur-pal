@@ -1,5 +1,6 @@
 import java.io.*;
 import java.sql.*;
+import java.util.ArrayList;
 public class Actions {
 	public Connection conn = null;
 	public String url = "jdbc:mysql://localhost:3306/";
@@ -29,6 +30,37 @@ public class Actions {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	public ArrayList<String> selectFollow(String num)
+	{
+		String query = "select personA from follow where personB = " + num;
+		ArrayList<String> s = new ArrayList<String>();
+		//String [] numA = null;
+		//int i = 0;
+		try
+		{
+			Class.forName(driver).newInstance();
+			conn = DriverManager.getConnection(url+dbName,userName,password);
+			Statement stmt = conn.createStatement();
+			rs = stmt.executeQuery(query);
+			
+			System.out.println("Disconnected from database");
+			while(rs.next())
+			{
+				s.add(rs.getString("personA"));
+				//numA[i] = rs.getString("personA");
+				//i++;
+				//System.out.println(rs.getString("personA"));
+				//return true;
+			}
+			conn.close();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+		return s;
 	}
 	public void updateConnections(String num1,String num2)
 	{
@@ -86,7 +118,14 @@ public class Actions {
 	public static void main(String[] args)
 	{
 		Actions a = new Actions();
-		a.updateConnections("9968379126", "9868224419");
+		//a.updateFollow("1","9868224419");
+		//a.updateFollow("2","9868224419");
+		//a.updateFollow("3","9868224419");
+		//a.updateConnections("9968379126", "9868224419");
+		//String [] s = null;
+		ArrayList<String> s = a.selectFollow("9868224419");
+		for(int i = 0; i < s.size(); i++)
+			System.out.println(s.get(i));
 	}
 
 }
