@@ -16,7 +16,12 @@ public class Pf3 {
 		numB = temp[1];
 		System.out.println(numA);
 		System.out.println(numB);
-		a.updateConnections(numA, numB);
+		if(numA != null && numB != null)
+		{
+			a.updateConnections(numA, numB);
+		}
+		else
+			System.exit(0);
 	}
 	public void fileDelete(String fileName)
 	{
@@ -54,9 +59,14 @@ public class Pf3 {
 			FileInputStream in = new FileInputStream(str[i]);
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			str1 = br.readLine();
-			p.acceptRequest(str1);
-			in.close();
-			p.fileDelete(str[i]);
+			if(str1 != null)
+			{
+				p.acceptRequest(str1);
+				in.close();
+				p.fileDelete(str[i]);
+			}
+			else
+				System.out.println("Nothing in file");
 		}
 		
 	}

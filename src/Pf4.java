@@ -17,10 +17,15 @@ public class Pf4 {
 		temp = s.split(",", 2);
 		num = temp[0];
 		place = temp[1];
-		a.updateLocation(num, place);
-		alist = a.selectFollow(num);
-		for(int i = 0; i < alist.size(); i++)
-			msg.sendLocation(num, place);
+		if(num != null && place != null)
+		{
+			a.updateLocation(num, place);
+			alist = a.selectFollow(num);
+			for(int i = 0; i < alist.size(); i++)
+				msg.sendLocation(num, place);
+		}
+		else
+			System.exit(0);
 	}
 	public void fileDelete(String fileName)
 	{
@@ -58,9 +63,14 @@ public class Pf4 {
 			FileInputStream in = new FileInputStream(str[i]);
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			str1 = br.readLine();
-			//p.acceptRequest(str1);
-			in.close();
-			p.fileDelete(str[i]);
+			if(str1 != null)
+			{
+				p.getLocation(str1);
+				in.close();
+				p.fileDelete(str[i]);
+			}
+			else
+				System.out.println("Nothing in file");
 		}
 		
 	}
