@@ -50,8 +50,8 @@ public class Pf3 {
 	    if (!success)
 	      throw new IllegalArgumentException("Delete: deletion failed");
 	}
-	public static void main(String[] args) throws Exception {
-		String [] str = {"abc.txt"};
+	public static void main3(String[] str) throws Exception {
+		//String [] str = {"abc.txt"};
 		Pf3 p = new Pf3();
 		String str1;
 		for(int i = 0; i < str.length; i++)
