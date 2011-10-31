@@ -50,7 +50,7 @@ public class Pf3 {
 	    if (!success)
 	      throw new IllegalArgumentException("Delete: deletion failed");
 	}
-	public static void main3(String[] str) throws Exception {
+	public void main3(String[] str) throws Exception {
 		//String [] str = {"abc.txt"};
 		Pf3 p = new Pf3();
 		String str1;
@@ -63,7 +63,7 @@ public class Pf3 {
 			{
 				p.acceptRequest(str1);
 				in.close();
-				p.fileDelete(str[i]);
+				//p.fileDelete(str[i]);
 			}
 			else
 				System.out.println("Nothing in file");

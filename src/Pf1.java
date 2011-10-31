@@ -65,7 +65,7 @@ public class Pf1 {
 			{
 				p.sendRequest(str1);
 				in.close();
-				p.fileDelete(str[i]);
+				//p.fileDelete(str[i]);
 			}
 			else
 				System.out.println("Nothing in file");
