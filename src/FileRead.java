@@ -3,148 +3,125 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collections;
-
-public class FileRead {
-	public int findtag(String filename){
-		try
-		{
-			FileInputStream in = new FileInputStream(filename);
-			BufferedReader br = new BufferedReader(new InputStreamReader(in));
-			filename = br.readLine();
-			in.close();
-			
-			char char1, char2, char3;
-			
-			char1 = filename.charAt(0);
-			char2 = filename.charAt(1);
-			char3 = filename.charAt(2);
-			if(char1 == 'p' && char2 == 'f')
-			{
-				if(char3 == '1')
-				{
-					return 1;
-				}
-				if(char3 == '2')
-				{
-					return 2;
-				}
-				if(char3 == '3')
-				{
-					return 3;
-				}
-				if(char3 == '4')
-				{
-					return 4;
-				}
-				
-			}
-			else
-				return 0;
-	         	  
-		}
-		catch(Exception e)
-		{
-	        System.out.println("End of File ");
-			System.err.println(e);
-	              
-		}
-		return 0;
-	}
 	
-	public String filelist(File dir)
-	{
-		boolean flag = false;
-		if(dir.isDirectory())
-			flag = true;
-		ArrayList<String> files = new ArrayList<String>();
-		while(flag)
-		{
-			flag = false;
-			String [] list = dir.list();
-			for (int i = 0; i < list.length; i++) 
+public class FileRead {
+	public int findtag(File filename1){
+			//String words;
+			try
 			{
-				File f = new File(dir + "\\" + list[i]);
-				if(f.isFile())
+				String one;
+				FileInputStream in1 = new FileInputStream(filename1);
+				BufferedReader br1 = new BufferedReader(new InputStreamReader(in1));
+				one = br1.readLine();
+				in1.close();
+				char char1, char2, char3;
+				
+				char1 = one.charAt(0);
+				char2 = one.charAt(1);
+				char3 = one.charAt(2);
+				
+				if(char1 == 'p' && char2 == 'f')
 				{
-					files.add(f.toString());
+					if(char3 == '1')
+					{
+						return 1;
+					}
+					if(char3 == '2')
+					{
+						return 2;
+					}
+					if(char3 == '3')
+					{
+						return 3;
+					}
+					if(char3 == '4')
+					{
+						return 4;
+					}
+					
 				}
 				else
-				{
-					dir = f;
-					flag = true;
-					break;
-				}
+					return 0;
+		         	  
 			}
-		}
-		return files.toString();
-	}
-	
-	public ArrayList<String> CreateStringList(String ... values)
-	{
-	    ArrayList<String> results = new ArrayList<String>();
-	    Collections.addAll(results, values);
-	    return results;
-	}
-	public String[] ConvertToStringArray(ArrayList list)
-	{
-	    return (String[])list.toArray(new String[0]);
-	}
-	public String[] AppendItemToArray(String[] array, String newValue)
-	{
-	    ArrayList<String> list = CreateStringList(array);
-	    list.add(array.length, newValue);
-	    return ConvertToStringArray(list);
-	}
-	
-	public static void main(String[] args) {
-		FileRead f = new FileRead();
-		File directory = new File("C:\\Users\\user\\workspace\\findurpalol\\src\\Incoming");
-		String allfiles = f.filelist(directory);
-		String [] list = allfiles.split(",");
-		
-		for (int i = 0 ; i < list.length; i++)
-		{
-			System.out.println(list[i]);
+			catch(Exception e)
+			{
+		        System.out.println("End of File ");
+				System.err.println(e);
+		              
+			}
+			return 0;
 		}
 		
-		String [] pf1 = null;
-		String [] pf2 = null;
-		String [] pf3 = null;
-		String [] pf4 = null;
-		if(list.length != 0)
-		{
-		for(int i = 0; i < list.length; i++)
-		{
-			int j = f.findtag(list[i]);
-			if(j == 1)
-				f.AppendItemToArray(pf1, list[i]);
-			else if(j == 2)
-				f.AppendItemToArray(pf2, list[i]);
-			else if(j == 3)
-				f.AppendItemToArray(pf3, list[i]);
-			else if(j == 4)
-				f.AppendItemToArray(pf4, list[i]);
-		}
 		
-		for (int i = 0 ; i < pf1.length; i++)
-		{
-			System.out.println(pf1[i]);
-		}
-		for (int i = 0 ; i < pf2.length; i++)
-		{
-			System.out.println(pf2[i]);
-		}
-		for (int i = 0 ; i < pf3.length; i++)
-		{
-			System.out.println(pf3[i]);
-		}
-		for (int i = 0 ; i < pf4.length; i++)
-		{
-			System.out.println(pf4[i]);
-		}
 		
-		}
+		public static void main(String[] args) throws Exception{
+			
 		
-	}
+			File inc = new File("C:\\Users\\user\\workspace\\findurpalol\\src\\Incoming");
+			boolean isDirec = inc.isDirectory();
+			 
+			if(isDirec == true)
+			{
+				File[] files = new File("C:\\Users\\user\\workspace\\findurpalol\\src\\Incoming").listFiles();
+				FileRead f = new FileRead();
+				int x =files.length;
+				
+				int i;
+				
+				ArrayList<String> pf1 = new ArrayList<String>(); 
+				ArrayList<String> pf2 = new ArrayList<String>();
+				ArrayList<String> pf3 = new ArrayList<String>();
+				ArrayList<String> pf4 = new ArrayList<String>();
+				
+				for(i = 0; i < x; i++)
+				{
+					int j = f.findtag(files[i]);
+					
+					if(j == 1 )
+					{
+						pf1.add(files[i].toString());			
+					}
+					else if(j == 2)
+					{
+						pf2.add(files[i].toString());
+				    }
+					else if(j == 3)
+					{
+						pf3.add(files[i].toString());
+					}
+					else if(j == 4)
+					{	
+						pf4.add(files[i].toString());
+					}
+				}
+
+			String[] spf1 = new String[pf1.size()];
+			for (int k = 0; k < pf1.size(); k++) {
+				spf1[k] = pf1.get(k);
+				System.out.println(spf1[k]);
+			}
+			String[] spf2 = new String[pf2.size()];
+			for (int k = 0; k < pf2.size(); k++) {
+				spf2[k] = pf2.get(k);
+				System.out.println(spf2[k]);
+			}
+			String[] spf3 = new String[pf3.size()];
+			for (int k = 0; k < pf3.size(); k++) {
+				spf3[k] = pf3.get(k);
+				System.out.println(spf3[k]);
+			}
+
+			String[] spf4 = new String[pf4.size()];
+			for (int k = 0; k < pf4.size(); k++) {
+				spf4[k] = pf4.get(k);
+				System.out.println(spf4[k]);
+			}
+			}
+			else
+			{
+				System.out.println("no files found!");
+			}
+			
+		}
 }

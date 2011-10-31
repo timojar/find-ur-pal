@@ -51,8 +51,9 @@ public class Pf1 {
 	    if (!success)
 	      throw new IllegalArgumentException("Delete: deletion failed");
 	}
-	public static void main(String[] args) throws Exception {
-		String [] str = {"abc.txt"};
+	public void main1(String[] str) throws Exception
+	{
+		//String [] str = {"abc.txt"};
 		Pf1 p = new Pf1();
 		String str1;
 		for(int i = 0; i < str.length; i++)
@@ -70,8 +71,7 @@ public class Pf1 {
 				System.out.println("Nothing in file");
 			
 		}
-		
+
 	}
-	
 
 }

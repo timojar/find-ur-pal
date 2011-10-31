@@ -54,8 +54,8 @@ public class Pf4 {
 	    if (!success)
 	      throw new IllegalArgumentException("Delete: deletion failed");
 	}
-	public static void main(String[] args) throws Exception {
-		String [] str = {"abc.txt"};
+	public void main4(String[] str) throws Exception {
+		//String [] str = {"abc.txt"};
 		Pf4 p = new Pf4();
 		String str1;
 		for(int i = 0; i < str.length; i++)
