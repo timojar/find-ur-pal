@@ -99,10 +99,12 @@ public class Actions {
 	}
 	public void updateLocation(String num,String place)
 	{
-		String query = "insert into location (person,place) values (" + num + "," + place + ")";
+		String query = "insert into location (person,place) values (" + num + ",'" + place + "')";
 		try
 		{
+			System.out.println("pf4 k liye");
 			System.out.println("inside try");
+			System.out.println(query);
 			Class.forName(driver).newInstance();
 			conn = DriverManager.getConnection(url+dbName,userName,password);
 			Statement stmt = conn.createStatement();

@@ -1,3 +1,4 @@
+//pf2
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,32 +10,32 @@ public class Pf2 {
 	public void parse(String s)
 	{
 		System.out.println("-----------"+s);
-		String numA,numB;
-		String [] temp = s.split(":", 2);
-		s = temp[1];
-		temp = s.split(",", 2);
-		numA = temp[0];
-		numB = temp[1];
-		try{
-			Integer.parseInt(numA);
-			Integer.parseInt(numB);
-			}
-			catch(Exception e)
-			{
-				System.out.print("\nThe 10 digits entered are not numbers.");
-				return;
-			}
-			if(numA.length()!=10 || numB.length()!=10)
-			{
-				System.out.print("\nThe 10 digits entered are not numbers.");
-				return;
-			}
-		//System.out.println(numA);
-		//System.out.println(numB);
-		if(a.selectConnections(numA, numB))
-		{
-			a.updateFollow(numA, numB);
-		}
+        String numA,numB;
+        String [] temp = s.split(":", 2);
+        s = temp[1];
+        temp = s.split(",", 2);
+        numA = temp[0];
+        numB = temp[1];
+        try{
+                Integer.parseInt(numA);
+                Integer.parseInt(numB);
+                }
+                catch(Exception e)
+                {
+                        System.out.print("\nThe 10 digits entered are not numbers.");
+                        return;
+                }
+                if(numA.length()!=10 || numB.length()!=10)
+                {
+                        System.out.print("\nThe 10 digits entered are not numbers.");
+                        return;
+                }
+        //System.out.println(numA);
+        //System.out.println(numB);
+        if(a.selectConnections(numA, numB))
+        {
+                a.updateFollow(numA, numB);
+        }
 	}
 	public void fileDelete(String fileName)
 	{
@@ -65,6 +66,7 @@ public class Pf2 {
 	}
 	public void main2(String[] str) throws Exception {
 		//String [] str = {"abc.txt"};
+		System.out.println("inside PF2");
 		System.out.println(str[0]);
 		Pf2 p = new Pf2();
 		String str1;
@@ -76,10 +78,10 @@ public class Pf2 {
 			if(str1 != null)
 			{
 				if(str1.length()!=25)
-				{
-					System.out.print("\nNot valid entry");
-					continue;
-				}
+                {
+                        System.out.print("\nNot valid entry");
+                        continue;
+                }
 				p.parse(str1);
 				in.close();
 				//p.fileDelete(str[i]);
@@ -87,6 +89,6 @@ public class Pf2 {
 			else
 				System.out.println("Nothing in file");
 		}
-		
+		System.out.println("successful pf2");
 	}
 }
