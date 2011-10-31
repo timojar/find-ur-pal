@@ -14,15 +14,15 @@ public class Pf1 {
 	}*/
 	public void sendRequest(String s)
 	{
-		String numA,numB;
-		String [] temp = s.split(":", 2);
-		s = temp[1];
-		temp = s.split(",", 2);
-		numA = temp[0];
-		numB = temp[1];
-		System.out.println(numA);
-		System.out.println(numB);
-		A.send(numA, numB);
+			String numA, numB;
+			String[] temp = s.split(":", 2);
+			s = temp[1];
+			temp = s.split(",", 2);
+			numA = temp[0];
+			numB = temp[1];
+			//System.out.println(numA);
+			//System.out.println(numB);
+			A.send(numA, numB);
 	}
 	public void fileDelete(String fileName)
 	{
@@ -60,9 +60,15 @@ public class Pf1 {
 			FileInputStream in = new FileInputStream(str[i]);
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			str1 = br.readLine();
-			p.sendRequest(str1);
-			in.close();
-			p.fileDelete(str[i]);
+			if(str1 != null)
+			{
+				p.sendRequest(str1);
+				in.close();
+				p.fileDelete(str[i]);
+			}
+			else
+				System.out.println("Nothing in file");
+			
 		}
 		
 	}

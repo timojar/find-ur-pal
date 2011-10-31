@@ -57,9 +57,14 @@ public class Pf2 {
 			FileInputStream in = new FileInputStream(str[i]);
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
 			str1 = br.readLine();
-			p.parse(str1);
-			in.close();
-			p.fileDelete(str[i]);
+			if(str1 != null)
+			{
+				p.parse(str1);
+				in.close();
+				p.fileDelete(str[i]);
+			}
+			else
+				System.out.println("Nothing in file");
 		}
 		
 	}
