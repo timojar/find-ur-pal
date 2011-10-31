@@ -13,6 +13,11 @@ public class FileRead {
 				FileInputStream in1 = new FileInputStream(filename1);
 				BufferedReader br1 = new BufferedReader(new InputStreamReader(in1));
 				one = br1.readLine();
+				if(one.trim()==null)
+				{
+					System.out.print("File is empty");
+					System.exit(0);
+				}
 				in1.close();
 				char char1, char2, char3;
 				
@@ -78,6 +83,7 @@ public class FileRead {
 				for(i = 0; i < x; i++)
 				{
 					int j = f.findtag(files[i]);
+					System.out.println(files[i]);
 					
 					if(j == 1 )
 					{
