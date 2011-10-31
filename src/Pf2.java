@@ -8,6 +8,7 @@ public class Pf2 {
 	Actions a = new Actions();
 	public void parse(String s)
 	{
+		System.out.println("-----------"+s);
 		String numA,numB;
 		String [] temp = s.split(":", 2);
 		s = temp[1];
@@ -50,6 +51,7 @@ public class Pf2 {
 	}
 	public void main2(String[] str) throws Exception {
 		//String [] str = {"abc.txt"};
+		System.out.println(str[0]);
 		Pf2 p = new Pf2();
 		String str1;
 		for(int i = 0; i < str.length; i++)
@@ -61,7 +63,7 @@ public class Pf2 {
 			{
 				p.parse(str1);
 				in.close();
-				p.fileDelete(str[i]);
+				//p.fileDelete(str[i]);
 			}
 			else
 				System.out.println("Nothing in file");

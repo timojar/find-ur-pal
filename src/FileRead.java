@@ -55,7 +55,8 @@ public class FileRead {
 		
 		
 		
-		public static void main(String[] args) throws Exception{
+		public static void main(String[] args) throws Exception
+		{
 			
 		
 			File inc = new File("C:\\Users\\user\\workspace\\findurpalol\\src\\Incoming");
@@ -99,29 +100,37 @@ public class FileRead {
 			String[] spf1 = new String[pf1.size()];
 			for (int k = 0; k < pf1.size(); k++) {
 				spf1[k] = pf1.get(k);
-				System.out.println(spf1[k]);
+				//System.out.println(spf1[k]);
 			}
 			String[] spf2 = new String[pf2.size()];
 			for (int k = 0; k < pf2.size(); k++) {
 				spf2[k] = pf2.get(k);
-				System.out.println(spf2[k]);
+				//System.out.println(spf2[k]);
 			}
 			String[] spf3 = new String[pf3.size()];
 			for (int k = 0; k < pf3.size(); k++) {
 				spf3[k] = pf3.get(k);
-				System.out.println(spf3[k]);
+				//System.out.println(spf3[k]);
 			}
 
 			String[] spf4 = new String[pf4.size()];
 			for (int k = 0; k < pf4.size(); k++) {
 				spf4[k] = pf4.get(k);
-				System.out.println(spf4[k]);
+				//System.out.println(spf4[k]);
 			}
+			Pf1 first = new Pf1();
+			first.main1(spf1);
+			Pf2 second = new Pf2();
+			second.main2(spf2);
+			Pf3 third = new Pf3();
+			third.main3(spf3);
+			Pf4 fourth = new Pf4();
+			fourth.main4(spf4);
 			}
 			else
 			{
 				System.out.println("no files found!");
 			}
-			
+		
 		}
 }
