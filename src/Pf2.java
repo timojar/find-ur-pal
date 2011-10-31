@@ -15,8 +15,22 @@ public class Pf2 {
 		temp = s.split(",", 2);
 		numA = temp[0];
 		numB = temp[1];
-		System.out.println(numA);
-		System.out.println(numB);
+		try{
+			Integer.parseInt(numA);
+			Integer.parseInt(numB);
+			}
+			catch(Exception e)
+			{
+				System.out.print("\nThe 10 digits entered are not numbers.");
+				return;
+			}
+			if(numA.length()!=10 || numB.length()!=10)
+			{
+				System.out.print("\nThe 10 digits entered are not numbers.");
+				return;
+			}
+		//System.out.println(numA);
+		//System.out.println(numB);
 		if(a.selectConnections(numA, numB))
 		{
 			a.updateFollow(numA, numB);
@@ -61,6 +75,11 @@ public class Pf2 {
 			str1 = br.readLine();
 			if(str1 != null)
 			{
+				if(str1.length()!=25)
+				{
+					System.out.print("\nNot valid entry");
+					continue;
+				}
 				p.parse(str1);
 				in.close();
 				//p.fileDelete(str[i]);

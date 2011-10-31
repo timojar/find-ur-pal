@@ -17,6 +17,19 @@ public class Pf4 {
 		temp = s.split(",", 2);
 		num = temp[0];
 		place = temp[1];
+		try{
+			Integer.parseInt(num);
+			}
+			catch(Exception e)
+			{
+				System.out.print("\nThe 10 digits entered is not number.");
+				return;
+			}
+			if(num.length()!=10 )
+			{
+				System.out.print("\nThe 10 digits entered is not number.");
+				return;
+			}
 		if(num != null && place != null)
 		{
 			a.updateLocation(num, place);
@@ -65,6 +78,11 @@ public class Pf4 {
 			str1 = br.readLine();
 			if(str1 != null)
 			{
+				if(str1.length()<16)
+				{
+					System.out.print("\nNot valid entry");
+					continue;
+				}
 				p.getLocation(str1);
 				in.close();
 				//p.fileDelete(str[i]);
