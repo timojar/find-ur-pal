@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/background"
+    android:orientation="vertical" >
+
+     <TextView android:id="@+id/TextView03" 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:textSize="30dp"
+			android:text="Location: "></TextView>
+    
+    <EditText
+        android:id="@+id/EditText03"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:inputType="text" >
+
+</EditText>
+    
+    <Button
+        android:id="@+id/Button07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170.0sp"
+        android:onClick="onClick"
+        android:text="Send Location"
+        android:textColor="@color/textfifth"
+        android:textSize="20dp" >
+</Button>
+    
+    
+
+</LinearLayout>

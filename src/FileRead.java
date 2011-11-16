@@ -18,6 +18,7 @@ public class FileRead {
 					System.out.print("File is empty");
 					System.exit(0);
 				}
+				//System.out.println(one);
 				in1.close();
 				char char1, char2, char3;
 				
@@ -83,7 +84,7 @@ public class FileRead {
 				for(i = 0; i < x; i++)
 				{
 					int j = f.findtag(files[i]);
-					System.out.println(files[i]);
+					//System.out.println(files[i]);
 					
 					if(j == 1 )
 					{
