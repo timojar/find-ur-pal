@@ -9,7 +9,7 @@ public class Pf2 {
 	Actions a = new Actions();
 	public void parse(String s)
 	{
-		System.out.println("-----------"+s);
+		System.out.println(s);
         String numA,numB;
         String [] temp = s.split(":", 2);
         s = temp[1];

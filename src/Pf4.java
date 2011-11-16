@@ -12,6 +12,7 @@ public class Pf4 {
 	ArrayList<String> alist = new ArrayList<String>();
 	public void getLocation(String s)
 	{
+		System.out.println(s);
 		String num,place;
         String [] temp = s.split(":", 2);
         s = temp[1];

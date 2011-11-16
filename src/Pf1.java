@@ -16,6 +16,7 @@ public class Pf1 {
 	public void sendRequest(String s)
 	{
 		String numA, numB;
+		System.out.println(s);
         String[] temp = s.split(":", 2);
         s = temp[1];
         temp = s.split(",", 2);

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SEprojectActivity!</string>
+    <string name="app_name">SEproject</string>
+    <color name="background">#FFFF00</color>
+    <color name="textone">#660198</color>
+    <color name="texttwo">#0000FF</color>
+    <color name="textthree">#EE00EE</color>
+    <color name="textfour">#4F4F2F</color>
+    <color name="textfifth">#0E8C3A</color>
+
+</resources>
