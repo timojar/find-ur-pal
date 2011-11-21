@@ -1,0 +1,15 @@
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\App.g.i.cs
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\MainPage.g.i.cs
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\Find Your Pal.g.resources
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\Bin\Debug\ApplicationIcon.png
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\Bin\Debug\Background.png
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\Bin\Debug\Find Your Pal.dll
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\Bin\Debug\Find Your Pal.pdb
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\Bin\Debug\AppManifest.xaml
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\Bin\Debug\Find_Your_Pal.xap
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\Find Your Pal.dll
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\Find Your Pal.pdb
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\XapCacheFile.xml
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\Faculty.g.i.cs
+C:\Users\Chirag\Documents\Visual Studio 2010\Projects\Find Your Pal\Find Your Pal\obj\Debug\Student.g.i.cs
