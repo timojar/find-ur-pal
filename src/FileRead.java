@@ -65,12 +65,13 @@ public class FileRead {
 		{
 			
 		
-			File inc = new File("C:\\Users\\user\\workspace\\findurpalol\\src\\Incoming");
+			//File inc = new File("C:\\Users\\user\\workspace\\findurpalol\\src\\Incoming");
+			File inc = new File("var/spool/sms/pf");
 			boolean isDirec = inc.isDirectory();
 			 
 			if(isDirec == true)
 			{
-				File[] files = new File("C:\\Users\\user\\workspace\\findurpalol\\src\\Incoming").listFiles();
+				File[] files = new File("var/spool/sms/pf").listFiles();
 				FileRead f = new FileRead();
 				int x =files.length;
 				

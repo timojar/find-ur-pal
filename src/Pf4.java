@@ -10,7 +10,7 @@ public class Pf4 {
 	Actions a = new Actions();
 	SendMsg msg = new SendMsg();
 	ArrayList<String> alist = new ArrayList<String>();
-	public void getLocation(String s)
+	public void getLocation(String s) throws Exception
 	{
 		System.out.println(s);
 		String num,place;
@@ -37,7 +37,7 @@ public class Pf4 {
                 a.updateLocation(num, place);
                 alist = a.selectFollow(num);
                 for(int i = 0; i < alist.size(); i++)
-                        msg.sendLocation(num, place);
+                        msg.sendLocation(alist.get(i), num, place);
         }
         else
                 System.exit(0);
